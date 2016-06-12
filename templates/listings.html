@@ -1,0 +1,39 @@
+<!-- results column  -->
+<div class="column property-list ">
+  <h2>Results</h2>
+  <div id="results">
+    <article *ngFor="#item of results">
+      <header style="background-color:{{item.agency.brandingColors.primary}};">
+        <img [src]="item.agency.logo">
+      </header>
+      <div class="showcase">
+        <img [src]="item.mainImage" alt="{{item.id}}">
+      </div>
+      <p class="price">{{item.price}}</p>
+      <span (click)="onSelect(item)" class="trigger">Add Property</span>
+    </article>
+  </div>
+</div>
+
+<!-- saved column  -->
+<div class="column">
+<h2>Saved Properties</h2>
+
+<div id="saved-properties">
+  <article *ngFor="#item of selectedItems">
+
+    <header style="background-color:{{item.agency.brandingColors.primary}};">
+      <img [src]="item.agency.logo">
+    </header>
+    <div class="showcase">
+      <img [src]="item.mainImage" alt="{{item.id}}">
+    </div>
+    <p class="price">{{item.price}}</p>
+    <span (click)="onDelete(item)" class="trigger">Remove Property</span>
+  </article>
+  <div class="message" *ngIf="selectCount" >
+      <p><strong>NOTE:</strong> You have no saved properties in your list.</p>
+  </div>
+
+</div>
+</div>
