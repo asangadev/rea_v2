@@ -1,15 +1,10 @@
 import {Component} from '@angular/core';
-import {BaseRequestOptions, Http, HTTP_PROVIDERS} from '@angular/http';
-//import {DataService} from "./data.service";
-import {Observable} from 'rxjs/Observable';
+import {AppController} from './app.component.controller';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'templates/basic.html',
-  //  providers: [DataService]
+    template:"<lists></lists>",
+    directives: [AppController]
 })
 
-export class AppComponent {
-	private rea: string = 'loaging the REA app...';
-  private reatest: string = 'test';
-}
+export class AppComponent {}

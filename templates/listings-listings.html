@@ -1,0 +1,16 @@
+<!-- results column  -->
+<div class="column property-list ">
+  <h2 (click)="ngOnInit()">Results</h2>
+  <div id="results">
+    <article *ngFor="let item of results">
+      <header style="background-color:{{item.agency.brandingColors.primary}};">
+        <img [src]="item.agency.logo">
+      </header>
+      <div class="showcase">
+        <img [src]="item.mainImage" alt="{{item.id}}">
+      </div>
+      <p class="price">{{item.price}}</p>
+      <span (click)="onSelect(item)" class="trigger">Add Property</span>
+    </article>
+  </div>
+</div>

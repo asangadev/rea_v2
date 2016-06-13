@@ -8,7 +8,6 @@ import {
 import {Http, BaseRequestOptions, Response, BaseResponseOptions, ResponseOptions, HTTP_PROVIDERS} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {provide} from '@angular/core';
-
 import {Observable} from 'rxjs/Observable';
 
 describe('MockBackend: DataService', () => {
@@ -106,4 +105,5 @@ describe('MockBackend: DataService', () => {
         });
 
       });
+      
 })

@@ -3,4 +3,4 @@ import {AppComponent} from './app.component';
 import {Http, HTTP_PROVIDERS} from '@angular/http';
 import 'rxjs/Rx';
 
-bootstrap(AppComponent);
+bootstrap(AppComponent, [HTTP_PROVIDERS]);
