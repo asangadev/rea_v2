@@ -10,13 +10,13 @@ export class DataService {
     //console.log('going to get data');
 
     getResults(): Observable<any> {
-      return this._http.get ('http://localhost:3000/data/mock.data.results.json')
+      return this._http.get ('data/mock.data.results.json')
         //http://jsonplaceholder.typicode.com/posts
         .map(response => response.json());
     }
 
     getSaved(): Observable<any> {
-      return this._http.get ('http://localhost:3000/data/mock.data.saved.json')
+      return this._http.get ('data/mock.data.saved.json')
         //http://jsonplaceholder.typicode.com/posts
         .map(response => response.json());
     }
